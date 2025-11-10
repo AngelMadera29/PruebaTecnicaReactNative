@@ -31,8 +31,8 @@ export const DetailLayout: React.FC = () => {
   };
 
   return (
-    <View style={{ alignItems: 'center', padding: 20 }}>
-      <Text style={{ fontSize: 24, fontWeight: 'bold', textTransform: 'capitalize' }}>
+    <View style={{ alignItems: 'center', padding: 20 , backgroundColor: '#fff'}}>
+      <Text style={{ fontSize: 24, fontWeight: 'bold', textTransform: 'capitalize', color: '#000' }}>
         {data.name}
       </Text>
 
@@ -46,7 +46,7 @@ export const DetailLayout: React.FC = () => {
       <Text>Peso: {data.weight / 10} kg</Text>
       <Text>Tipo(s): {data.types.map((t: any) => t.type.name).join(', ')}</Text>
             {data.abilities.map((a: any) => (
-        <Text key={a.ability.name}>- {a.ability.name}</Text>
+        <Text key={a.ability.name} style={{ color: '#000' }}>- {a.ability.name}</Text>
         ))}
 
       <TouchableOpacity

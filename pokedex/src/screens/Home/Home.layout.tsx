@@ -109,7 +109,7 @@ export const HomeLayout: React.FC<any> = ({ navigation }) => {
     );
 
   return (
-    <View style={{ flex: 1, padding: 10 }}>
+    <View style={{ flex: 1, padding: 10, backgroundColor: '#fff'  }}>
       <TextInput
         placeholder="Buscar Pokémon..."
         placeholderTextColor="#999"
@@ -124,6 +124,7 @@ export const HomeLayout: React.FC<any> = ({ navigation }) => {
           paddingVertical: 8,
           marginBottom: 10,
           fontSize: 16,
+          color: '#000',
         }}
       />
 
@@ -171,7 +172,7 @@ export const HomeLayout: React.FC<any> = ({ navigation }) => {
             }}
             onPress={() => navigation.navigate('Detail', { name: item.name })}
           >
-            <Text style={{ fontSize: 18, textTransform: 'capitalize' }}>{item.name}</Text>
+            <Text style={{ fontSize: 18, textTransform: 'capitalize', color: '#000' }}>{item.name}</Text>
           </TouchableOpacity>
         )}
         onEndReached={() => hasNextPage && fetchNextPage()}
